@@ -47,7 +47,7 @@ export default {
     signup () {
       axios({
         method: 'post',
-        url: 'http://localhost:3000/users/signup',
+        url: 'http://blog-server.srohimah.com/users/signup',
         data: {
           email: this.email,
           name: this.name,

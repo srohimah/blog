@@ -24,7 +24,7 @@ import swal from 'sweetalert'
 
 export default {
   created () {
-    axios.get(`http://localhost:3000/articles/${this.$route.params.id}`).then(article => {
+    axios.get(`http://blog-server.srohimah.com/articles/${this.$route.params.id}`).then(article => {
       this.title = article.data.title
       this.body = article.data.body
     }).catch(err => console.log(err))
@@ -39,7 +39,7 @@ export default {
     updateArticle () {
       axios({
         method: 'put',
-        url: `http://localhost:3000/articles/${this.$route.params.id}`,
+        url: `http://blog-server.srohimah.com/articles/${this.$route.params.id}`,
         data: {
           title: this.title,
           body: this.body

@@ -43,7 +43,7 @@ export default {
     signin () {
       axios({
         method: 'post',
-        url: 'http://localhost:3000/users/signin',
+        url: 'http://blog-server.srohimah.com/users/signin',
         data: {
           email: this.email,
           password: this.password

@@ -42,7 +42,7 @@ export default {
     addArticle () {
       axios({
         method: 'post',
-        url: 'http://localhost:3000/articles/',
+        url: 'http://blog-server.srohimah.com/articles/',
         data: {
           title: this.title,
           body: this.body

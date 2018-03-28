@@ -24,7 +24,7 @@ import moment from 'moment'
 
 export default {
   created () {
-    axios.get('http://localhost:3000/articles').then(article => {
+    axios.get('http://blog-server.srohimah.com/articles').then(article => {
       this.articles = article.data.data.map(val => val)
     }).catch(err => console.log(err))
   },
@@ -48,7 +48,7 @@ export default {
       })
       .then((willDelete) => {
           if (willDelete) {
-            axios.delete(`http://localhost:3000/articles/${id}`).then(article => {
+            axios.delete(`http://blog-server.srohimah.com/articles/${id}`).then(article => {
           }).catch(err => console.log(err))
 				}
       })
